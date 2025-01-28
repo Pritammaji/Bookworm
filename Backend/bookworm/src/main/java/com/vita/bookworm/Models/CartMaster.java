@@ -9,12 +9,11 @@ import lombok.Data;
 
 @Entity
 @Data
-public class AttributeMaster {
+public class CartMaster {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "attribute_id")
-    private int attributeId;
+    @Column(name = "cart_id")
+    private int cartId;
 
-    @Column(nullable = true,name = "attribute_name")
-    private String attributeName;
+    private double cost;
 }
