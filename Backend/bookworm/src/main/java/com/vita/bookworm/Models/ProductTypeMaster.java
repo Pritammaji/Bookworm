@@ -9,12 +9,12 @@ import lombok.Data;
 
 @Entity
 @Data
-public class AttributeMaster {
+public class ProductTypeMaster {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "attribute_id")
-    private int attributeId;
-
-    @Column(nullable = true,name = "attribute_name")
-    private String attributeName;
+    @Column(name = "type_id")
+    private int TypeId;
+    
+    @Column(nullable = true)
+    private String TypeDesc;
 }
