@@ -18,7 +18,7 @@ public class ProductMaster {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "product_id")
-    private int productId;
+    private Integer productId;
 
     @Column(nullable = true)
     private String productName;
@@ -31,13 +31,13 @@ public class ProductMaster {
     private ProductTypeMaster productType; 
 
     @Column(nullable = true)
-    private double productBasePrice;
+    private Double productBasePrice;
 
     @Column(nullable = true)
-    private double productSpCost;
+    private Double productSpCost;
 
     @Column(nullable = true)
-    private double productOfferPrice;
+    private Double productOfferPrice;
     
     @Column(nullable = true)
     private LocalDate productOffPriceExpiryDate;
@@ -63,11 +63,11 @@ public class ProductMaster {
     private GenreMaster productGenre;
 
     @Column(nullable = true)
-    private boolean isRentable; // Y/N
+    private Boolean isRentable; // Y/N
     
     @Column(nullable = true )
-    private double rentPerDay;
+    private Double rentPerDay;
 
     @Column(nullable = true , columnDefinition = "int default 3") 
-    private int minRentDays;
+    private Integer minRentDays;
 }

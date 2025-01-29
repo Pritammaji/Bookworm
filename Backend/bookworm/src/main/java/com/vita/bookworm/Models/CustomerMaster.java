@@ -16,7 +16,7 @@ import lombok.Data;
 public class CustomerMaster {
     @Id
     @GeneratedValue
-    @Column(name = "customer_id")
+    @Column(name = "customer_id" , columnDefinition = "int default 1")
     private int customerId;
 
     @Column(nullable = true, unique = true)
@@ -33,7 +33,7 @@ public class CustomerMaster {
     private LocalDate dob; 
 
     @Column(nullable = true)
-    private int age;
+    private Integer age;
 
     @Column(nullable = true)
     private String pan;

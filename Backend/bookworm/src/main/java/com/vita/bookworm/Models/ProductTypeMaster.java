@@ -13,7 +13,7 @@ public class ProductTypeMaster {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "type_id")
-    private int TypeId;
+    private Integer TypeId;
     
     @Column(nullable = true)
     private String TypeDesc;

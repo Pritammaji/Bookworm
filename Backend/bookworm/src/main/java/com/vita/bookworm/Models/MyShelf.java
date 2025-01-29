@@ -13,7 +13,8 @@ public class MyShelf {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "shelf_id")
-    private int shelfId;
+    private Integer shelfId;
 
-    private int noOfBooks;
+    @Column(nullable = true)
+    private Integer noOfBooks;
 }
