@@ -1,7 +1,8 @@
 package com.vita.bookworm.Models;
 
-
 import java.time.LocalDate;
+
+import org.springframework.jmx.export.annotation.ManagedResource;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -27,8 +28,8 @@ public class ProductMaster {
     private String productEnglishName;
 
     @ManyToOne
-    @JoinColumn(name = "type_id",nullable = true,referencedColumnName = "type_id")
-    private ProductTypeMaster productType; 
+    @JoinColumn(name = "type_id", nullable = true, referencedColumnName = "type_id")
+    private ProductTypeMaster productType;
 
     @Column(nullable = true)
     private Double productBasePrice;
@@ -38,10 +39,10 @@ public class ProductMaster {
 
     @Column(nullable = true)
     private Double productOfferPrice;
-    
+
     @Column(nullable = true)
     private LocalDate productOffPriceExpiryDate;
-    
+
     @Column(nullable = true)
     private String productDescriptionShort;
 
@@ -51,23 +52,24 @@ public class ProductMaster {
     @Column(nullable = true)
     private String productIsbn;
 
-    @Column(nullable = true)
-    private String productAuthor;
+    @ManyToOne
+    @JoinColumn(name = "author_id", nullable = true)
+    private AuthorMaster productAuthor;
 
     @ManyToOne
-    @JoinColumn(name = "language_id",nullable = true)
-    private LanguageMaster productLang; 
+    @JoinColumn(name = "language_id", nullable = true)
+    private LanguageMaster productLang;
 
     @ManyToOne
-    @JoinColumn(name = "genre_id",nullable = true)
+    @JoinColumn(name = "genre_id", nullable = true)
     private GenreMaster productGenre;
 
     @Column(nullable = true)
     private Boolean isRentable; // Y/N
-    
-    @Column(nullable = true )
+
+    @Column(nullable = true)
     private Double rentPerDay;
 
-    @Column(nullable = true , columnDefinition = "int default 3") 
+    @Column(nullable = true, columnDefinition = "int default 3")
     private Integer minRentDays;
 }

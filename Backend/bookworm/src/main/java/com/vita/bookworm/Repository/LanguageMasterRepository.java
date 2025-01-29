@@ -3,9 +3,9 @@ package com.vita.bookworm.Repository;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import com.vita.bookworm.Models.MyShelf;
+import com.vita.bookworm.Models.LanguageMaster;
 
 @Repository
-public interface MyShelfRepository extends JpaRepository<MyShelf, Integer> {
-    
+public interface LanguageMasterRepository extends JpaRepository<LanguageMaster, Integer> {
+
 }
