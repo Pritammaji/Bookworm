@@ -9,7 +9,7 @@ public class ProductArribute {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "product_attribute_id")
-    private int productAttributeId;
+    private Integer productAttributeId;
 
     @ManyToOne
     @JoinColumn(name = "attribute_id",nullable = true)

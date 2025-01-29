@@ -19,7 +19,7 @@ public class CartDetails {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "cart_details_id")
-    private int cartDetailsId;
+    private Integer cartDetailsId;
 
     @OneToMany
     @JoinColumn(name = "cart_id", nullable = true)
@@ -31,8 +31,8 @@ public class CartDetails {
     private ProductMaster productId;
 
     @Column(nullable = true)
-    private boolean isPurchased;
+    private Boolean isPurchased;
 
-    private int rentNoOfDays;
+    private Integer rentNoOfDays;
 
 }
