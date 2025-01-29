@@ -11,7 +11,7 @@ public class RoyaltyCalculation {
     @Id 
     @GeneratedValue(strategy=GenerationType.IDENTITY)
     @Column(name="RoyCalId", length=10)
-    private int royaltyCalculationId;
+    private Integer royaltyCalculationId;
 
     @ManyToOne(targetEntity = Invoice.class)
     private Invoice invoice;
@@ -26,18 +26,18 @@ public class RoyaltyCalculation {
     private ProductMaster product;
 
 	@Column(nullable=false)
-    private int quantity;
+    private Integer quantity;
 
 	@Column(nullable=false)
     private String transactionType;
 
 	@Column(nullable=false)
-    private double salesPrice;
+    private Double salesPrice;
 
 	@Column(nullable=false)
-    private double basePrice;
+    private Double basePrice;
 
 	@Column(nullable=false)
-    private double royaltyOnBasePrice;
+    private Double royaltyOnBasePrice;
 
 }

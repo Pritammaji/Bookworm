@@ -13,7 +13,7 @@ public class AttributeMaster {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "attribute_id")
-    private int attributeId;
+    private Integer attributeId;
 
     @Column(nullable = true,name = "attribute_name")
     private String attributeName;

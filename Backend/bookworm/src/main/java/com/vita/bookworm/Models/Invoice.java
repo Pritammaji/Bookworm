@@ -17,14 +17,14 @@ public class Invoice {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "invoice_id")
-    private int invoiceId;
+    private Integer invoiceId;
 
     @ManyToOne
     @JoinColumn(name = "customer_id", nullable = true)
     private CustomerMaster customerId;
     
     @Column(nullable = true)
-    private double amount;
+    private Double amount;
 
     @Column(nullable = true)
     private Date date;

@@ -15,7 +15,7 @@ public class GenreMaster {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "genre_id")
-    private int genreId;
+    private Integer genreId;
 
     @Column(nullable = true)
     private String genreDesc;

@@ -16,7 +16,7 @@ public class LanguageMaster {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "language_id")
-    private int languageId;
+    private Integer languageId;
 
     @Column(nullable = true)
     private String languageDesc;

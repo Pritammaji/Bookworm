@@ -17,7 +17,7 @@ public class ShelfDetails {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "shelf_dtl_id")
-    private Long id;
+    private Integer shelfDetailId;
 
     // @OneToMany(targetEntity = MyShelf.class)
      @ManyToOne
