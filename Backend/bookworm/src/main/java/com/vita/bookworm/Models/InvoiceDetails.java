@@ -25,7 +25,6 @@ public class InvoiceDetails {
 
     @ManyToOne
     @JoinColumn(name = "product_id", nullable = true)
-    
     private ProductMaster product;
 
     @Column(nullable = true)
