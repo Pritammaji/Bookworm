@@ -17,7 +17,7 @@ public class CustomerMaster {
     @Id
     @GeneratedValue
     @Column(name = "customer_id")
-    private Long customerId;
+    private int customerId;
 
     @Column(nullable = true, unique = true)
     @Pattern(regexp = "^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$")
