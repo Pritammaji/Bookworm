@@ -20,7 +20,7 @@ public class LoginController {
     }
 
     @GetMapping("/login")
-    public CustomerMaster login(@RequestBody CustomerMaster c) {
+    public  CustomerMaster login(@RequestBody CustomerMaster c) {
         return customerMasterServices.checkUser(c);
     }
 
