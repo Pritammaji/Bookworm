@@ -22,6 +22,6 @@ public class LanguageMaster {
     private String languageDesc;
 
     @ManyToOne
-    @JoinColumn(name = "type_id",nullable = true)
+    @JoinColumn(name = "type_id", nullable = true)
     private ProductTypeMaster typeId;
 }
