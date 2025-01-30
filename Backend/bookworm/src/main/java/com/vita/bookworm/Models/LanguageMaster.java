@@ -18,7 +18,6 @@ public class LanguageMaster {
     @Column(name = "language_id")
     private Integer languageId;
 
-    @Column(nullable = true)
     private String languageDesc;
 
     @ManyToOne

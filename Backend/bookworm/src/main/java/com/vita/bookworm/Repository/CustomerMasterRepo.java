@@ -12,4 +12,6 @@ public interface CustomerMasterRepo extends JpaRepository<CustomerMaster, Intege
     @Query(value = "SELECT * FROM customer_master c WHERE c.customer_email = :email and c.customer_password = :password" , nativeQuery = true)
     CustomerMaster findByEmailAndPassword(@Param("email") String email , @Param("password") String password);
 
+    @Query(value = "SELECT * FROM customer_master c WHERE c.customer_email = :email" , nativeQuery = true)
+    CustomerMaster findByEmail(@Param("email") String email);
 }

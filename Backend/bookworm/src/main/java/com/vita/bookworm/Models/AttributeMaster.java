@@ -15,6 +15,6 @@ public class AttributeMaster {
     @Column(name = "attribute_id")
     private Integer attributeId;
 
-    @Column(nullable = true,name = "attribute_name")
+    @Column(name = "attribute_name")
     private String attributeName;
 }

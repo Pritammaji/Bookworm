@@ -17,7 +17,6 @@ public class GenreMaster {
     @Column(name = "genre_id")
     private Integer genreId;
 
-    @Column(nullable = true)
     private String genreDesc;
 
     @ManyToOne

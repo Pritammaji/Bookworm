@@ -11,15 +11,28 @@ import com.vita.bookworm.Models.ProductMaster;
 
 @Repository
 public interface ProductMasterRepository extends JpaRepository<ProductMaster, Integer> {
-    // @Query(value = "select * from product_master where :typeid = type_id or
-    // product_english_name LIKE concat('%', :pname, '%') or :langid = language_id
-    // or :genreid = genre_id", nativeQuery = true)
+    @Query(value = "select * from product_master where (:typeid is null or :typeid = type_id ) and (:pname is null or product_english_name LIKE concat('%', :pname, '%')) and (:langid is null or :langid = language_id ) and (:genreid is null or :genreid = genre_id)", nativeQuery = true)
+    List<ProductMaster> getProduct(
+            @Param("typeid") Integer typeid,
+            @Param("pname") String pname,
+            @Param("langid") Integer langid,
+            @Param("genreid") Integer genreid);
 
-    // List<ProductMaster> getProduct(@Param("typeid") Integer typeid,
-    // @Param("pname") String pname,
-    // @Param("langid") Integer langid,
-    // @Param("genreid") Integer genreid);
     @Query(value = "select * from product_master", nativeQuery = true)
-    public List<ProductMaster> getAllProducts();
+    List<ProductMaster> getAllProducts();
 
+    @Query(value = "select * from product_master where product_english_name LIKE concat('%', :name, '%')", nativeQuery = true)
+    List<ProductMaster> findByName(@Param("name") String name);
+
+    @Query(value = "select * from product_master where type_id = :type", nativeQuery = true)
+    List<ProductMaster> findByType(@Param("type") int type);
+
+    @Query(value = "select * from product_master where genre_id = :genre", nativeQuery = true)
+    List<ProductMaster> findByGenre(@Param("genre") int genre);
+
+    @Query(value = "select * from product_master where language_id = :language", nativeQuery = true)
+    List<ProductMaster> findByLanguage(@Param("language") int language);
+
+    @Query(value = "select * from product_master where author_id = :author", nativeQuery = true)
+    List<ProductMaster> findByAuthorId(@Param("author") int author);
 }

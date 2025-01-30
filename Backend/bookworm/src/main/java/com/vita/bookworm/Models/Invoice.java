@@ -23,10 +23,9 @@ public class Invoice {
     @JoinColumn(name = "customer_id", nullable = true)
     private CustomerMaster customerId;
     
-    @Column(nullable = true)
+    @Column(columnDefinition = "Decimal default 0" )
     private Double amount;
 
-    @Column(nullable = true)
     private Date date;
 
     @ManyToOne

@@ -28,14 +28,8 @@ public class ShelfDetails {
     @JoinColumn(name = "product_id", nullable = true)
     private ProductMaster product;
 
-    @ManyToOne
-    @JoinColumn(name = "customer_id", nullable = true)
-    private CustomerMaster customer;
-
-    @Column(nullable = true)
     private Double basePrice;
-
-    @Column(nullable = true)
+        
     private String tranType;
 
     @ManyToOne

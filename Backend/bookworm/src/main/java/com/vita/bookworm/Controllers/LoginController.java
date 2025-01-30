@@ -26,6 +26,9 @@ public class LoginController {
 
     @PostMapping("/register")
     public CustomerMaster register(@RequestBody CustomerMaster c) {
+        if (customerMasterServices.checkUserExists(c)) {
+            return null;
+        }
         return customerMasterServices.registerUser(c);
     }
 }

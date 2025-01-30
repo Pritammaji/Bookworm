@@ -23,22 +23,17 @@ public class CustomerMaster {
     @Pattern(regexp = "^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$")
     private String customerEmail; 
 
-    @Column(nullable = true)
     private String customerName;
 
-    @Column(nullable = true)
     private String customerPassword;
 
-    @Column(nullable = true)
     private LocalDate dob; 
 
-    @Column(nullable = true)
     private Integer age;
 
     @Column(nullable = true)
     private String pan;
 
-    @Column(nullable = true)
     @Pattern(regexp = "^[0-9]{10}$")
     private String phoneNumber;
 

@@ -15,6 +15,5 @@ public class MyShelf {
     @Column(name = "shelf_id")
     private Integer shelfId;
 
-    @Column(nullable = true)
     private Integer noOfBooks;
 }
