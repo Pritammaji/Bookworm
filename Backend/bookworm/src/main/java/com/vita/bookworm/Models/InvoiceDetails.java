@@ -27,13 +27,10 @@ public class InvoiceDetails {
     @JoinColumn(name = "product_id", nullable = true)
     private ProductMaster product;
 
-    @Column(nullable = true)
     private Integer quantity;
 
-    @Column(nullable = true)
     private Double basePrice;
 
-    @Column(nullable = true)
     private String tranType;
 
     private Integer rentNoOfDays;

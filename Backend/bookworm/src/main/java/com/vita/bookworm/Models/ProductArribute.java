@@ -19,7 +19,7 @@ public class ProductArribute {
     @JoinColumn(name = "product_id",nullable = true)
     private ProductMaster productId;
 
-    @Column(nullable = true,name = "attribute_value")
+    @Column(name = "attribute_value")
     private String attributeValue;
 
 

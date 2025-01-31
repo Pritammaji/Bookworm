@@ -40,4 +40,12 @@ public class CustomerMasterServices {
 
         return c1;
     }
+
+    public boolean checkUserExists(CustomerMaster c) {
+        CustomerMaster c1 = customerMasterRepo.findByEmail(c.getCustomerEmail());
+        if (c1 != null) {
+            return true;
+        }
+        return false;
+    }
 }

@@ -25,12 +25,10 @@ public class CartDetails {
     @JoinColumn(name = "cart_id", nullable = true)
     private Set<CartMaster> cartId;
 
-    @ManyToOne
-    
+    @ManyToOne    
     @JoinColumn(name = "product_id", nullable = true)
     private ProductMaster productId;
 
-    @Column(nullable = true)
     private Boolean isPurchased;
 
     private Integer rentNoOfDays;

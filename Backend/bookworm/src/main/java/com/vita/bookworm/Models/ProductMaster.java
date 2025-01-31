@@ -2,8 +2,6 @@ package com.vita.bookworm.Models;
 
 import java.time.LocalDate;
 
-import org.springframework.jmx.export.annotation.ManagedResource;
-
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -64,7 +62,6 @@ public class ProductMaster {
     @JoinColumn(name = "genre_id", nullable = true)
     private GenreMaster productGenre;
 
-    @Column(nullable = true)
     private Boolean isRentable; // Y/N
 
     @Column(nullable = true)
