@@ -1,6 +1,5 @@
 package com.vita.bookworm.Models;
 
-
 import java.time.LocalDate;
 
 import jakarta.persistence.Column;
@@ -18,7 +17,7 @@ public class ProductMaster {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "product_id")
-    private int productId;
+    private Integer productId;
 
     @Column(nullable = true)
     private String productName;
@@ -27,21 +26,21 @@ public class ProductMaster {
     private String productEnglishName;
 
     @ManyToOne
-    @JoinColumn(name = "type_id",nullable = true,referencedColumnName = "type_id")
-    private ProductTypeMaster productType; 
+    @JoinColumn(name = "type_id", nullable = true, referencedColumnName = "type_id")
+    private ProductTypeMaster productType;
 
     @Column(nullable = true)
-    private double productBasePrice;
+    private Double productBasePrice;
 
     @Column(nullable = true)
-    private double productSpCost;
+    private Double productSpCost;
 
     @Column(nullable = true)
-    private double productOfferPrice;
-    
+    private Double productOfferPrice;
+
     @Column(nullable = true)
     private LocalDate productOffPriceExpiryDate;
-    
+
     @Column(nullable = true)
     private String productDescriptionShort;
 
@@ -51,23 +50,23 @@ public class ProductMaster {
     @Column(nullable = true)
     private String productIsbn;
 
-    @Column(nullable = true)
-    private String productAuthor;
+    @ManyToOne
+    @JoinColumn(name = "author_id", nullable = true)
+    private AuthorMaster productAuthor;
 
     @ManyToOne
-    @JoinColumn(name = "language_id",nullable = true)
-    private LanguageMaster productLang; 
+    @JoinColumn(name = "language_id", nullable = true)
+    private LanguageMaster productLang;
 
     @ManyToOne
-    @JoinColumn(name = "genre_id",nullable = true)
+    @JoinColumn(name = "genre_id", nullable = true)
     private GenreMaster productGenre;
 
-    @Column(nullable = true)
-    private boolean isRentable; // Y/N
-    
-    @Column(nullable = true )
-    private double rentPerDay;
+    private Boolean isRentable; // Y/N
 
-    @Column(nullable = true , columnDefinition = "int default 3") 
-    private int minRentDays;
+    @Column(nullable = true)
+    private Double rentPerDay;
+
+    @Column(nullable = true, columnDefinition = "int default 3")
+    private Integer minRentDays;
 }

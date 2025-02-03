@@ -15,7 +15,8 @@ public class ProductBeneficiary {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "product_beneficiary_id")
-    private int beneficiaryId;
+    private Integer beneficiaryId;
+    
     @ManyToOne()
     @JoinColumn(name = "beneficiary_id",  nullable = true)
     private BeneficiaryMaster beneficiaryMaster;
@@ -24,6 +25,6 @@ public class ProductBeneficiary {
     @JoinColumn(name = "product_id",  nullable = true)
     private ProductMaster productMaster;
 
-    @Column(nullable = true,name = "percentage")
-    private double percentage;
+    @Column(name = "percentage")
+    private Double percentage;
 }

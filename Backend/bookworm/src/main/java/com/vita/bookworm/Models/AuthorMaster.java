@@ -1,6 +1,5 @@
 package com.vita.bookworm.Models;
 
-import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -9,12 +8,10 @@ import lombok.Data;
 
 @Entity
 @Data
-public class AttributeMaster {
+public class AuthorMaster {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "attribute_id")
-    private Integer attributeId;
+    private Integer authorId;
 
-    @Column(name = "attribute_name")
-    private String attributeName;
+    private String authorName;
 }

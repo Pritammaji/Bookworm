@@ -9,34 +9,28 @@ import lombok.Data;
 public class BeneficiaryMaster {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int benId;
+    private Integer benId;
     
-    @Column(nullable = true,name = "ben_name")
+    @Column(name = "ben_name")
     private String benName;
 
     @Column(nullable = true)
-    @Pattern(regexp = "^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$")
+    @Pattern(regexp = "^[a-zA-Z0-9_.-]+@[a-zA-Z0-9.-]+$")
     private String benEmail;
 
     @Column(nullable = true)
     @Pattern(regexp = "^[0-9]{10}$")
     private String benPhone;
 
-    @Column(nullable = true)
     private String benBankName;
 
-    @Column(nullable = true)
     private String benBankBranch;
 
-    @Column(nullable = true)
     private String benBankAccNo;
 
-    @Column(nullable = true)
     private String benIfsc;
 
-    @Column(nullable = true)
     private String benAccType;
 
-    @Column(nullable = true)
     private String benPan;
 }
